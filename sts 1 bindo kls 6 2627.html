@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMATIF TENGAH SEMESTER 1 BAHASA INDONESIA KELAS 6 - SD 2 MENAWAN</title>
+    <style>
+        :root {
+            --primary-color: #065f46;
+            --secondary-color: #059669;
+            --bg-color: #f0fdf4;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px double var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .header h2 {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #374151;
+        }
+
+        .identity-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            background-color: #ecfdf5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #a7f3d0;
+        }
+
+        @media (max-width: 600px) {
+            .identity-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .identity-box div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .identity-box label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .identity-box input {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .section-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .question-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .score-badge {
+            float: right;
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .options label {
+            display: flex;
+            align-items: flex-start;
+            margin: 8px 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .options input[type="radio"], .options input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table.bs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            min-width: 400px;
+        }
+
+        table.bs-table th, table.bs-table td {
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        table.bs-table th {
+            background-color: #f1f5f9;
+            text-align: center;
+        }
+
+        table.bs-table td.center {
+            text-align: center;
+        }
+
+        select.match-select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        input[type="text"].short-input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btn-submit {
+            background-color: #16a34a;
+            color: white;
+        }
+
+        .btn-download {
+            background-color: var(--secondary-color);
+            color: white;
+            display: none;
+        }
+
+        .footer-teacher {
+            margin-top: 50px;
+            text-align: right;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-weight: bold;
+        }
+
+        .story-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--secondary-color);
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>SUMATIF TENGAH SEMESTER 1 BAHASA INDONESIA KELAS 6</h1>
+        <h2>SD 2 MENAWAN — TAHUN AJARAN 2026/2027</h2>
+        <p style="font-size: 13px; margin: 5px 0;">Waktu: 90 Menit | Mata Pelajaran: Bahasa Indonesia</p>
+    </div>
+
+    <!-- Identitas Siswa -->
+    <div class="identity-box">
+        <div>
+            <label for="namaSiswa">Nama Lengkap:</label>
+            <input type="text" id="namaSiswa" placeholder="Masukkan nama siswa...">
+        </div>
+        <div>
+            <label for="noAbsen">Nomor Presensi:</label>
+            <input type="text" id="noAbsen" placeholder="Masukkan nomor presensi...">
+        </div>
+    </div>
+
+    <form id="quizForm">
+        <!-- BAGIAN I -->
+        <div class="section-title">I. Ayo, memilih salah satu jawaban yang tepat!</div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">1. Salah satu ciri-ciri teks eksplanasi yaitu menggunakan bahasa ....</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> a. baku</label>
+                <label><input type="radio" name="q1" value="B"> b. informal</label>
+                <label><input type="radio" name="q1" value="C"> c. daerah</label>
+                <label><input type="radio" name="q1" value="D"> d. asing</label>
+            </div>
+        </div>
+
+        <div class="story-box">
+            <b>Teks untuk mengerjakan soal nomor 2 sampai 5:</b><br>
+            Hujan asam merupakan salah satu fenomena pencemaran udara. Secara alami, air hujan memang sedikit asam dengan pH sekitar 5,6 akibat adanya karbon dioksida (CO2) yang larut di atmosfer. Namun, pembakaran bahan bakar fosil, aktivitas industri, hingga pembakaran lahan pertanian dapat meningkatkan kandungan polutan di udara.<br><br>
+            Hujan asam terbentuk ketika gas pencemar, terutama sulfur dioksida (SO2) dan nitrogen oksida (NOx), dilepaskan ke udara akibat aktivitas manusia. Aktivitas tersebut, seperti pembakaran bahan bakar fosil, kendaraan bermotor, dan pembakaran lahan. Gas-gas tersebut kemudian bercampur dengan uap air dan oksigen di atmosfer. Setelah bereaksi, terbentuklah zat asam yang ikut larut dalam air hujan. Zat asam ini membuat pH hujan menjadi lebih rendah dari normal.
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">2. Informasi yang sesuai dengan teks di atas adalah ....</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> a. hujan asam merupakan contoh fenomena pencemaran suara</label>
+                <label><input type="radio" name="q2" value="B"> b. zat asam terbentuk ketika gas pencemar bercampur dengan uap air dan hidrogen di atmosfer</label>
+                <label><input type="radio" name="q2" value="C"> c. hujan asam merupakan fenomena alam yang terjadi saat pH hujan lebih tinggi dari normal</label>
+                <label><input type="radio" name="q2" value="D"> d. kandungan polutan di udara dapat meningkat akibat aktivitas industri</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">3. Gas pencemar yang menyebabkan terbentuknya hujan asam yaitu ....</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> a. nitrogen oksida dan karbon dioksida</label>
+                <label><input type="radio" name="q3" value="B"> b. sulfur dioksida dan nitrogen oksida</label>
+                <label><input type="radio" name="q3" value="C"> c. karbon dioksida dan sulfur dioksida</label>
+                <label><input type="radio" name="q3" value="D"> d. sulfur dioksida dan karbon monoksida</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">4. Berikut bukan termasuk kata konsonan rangkap adalah ....</div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> a. hujan</label>
+                <label><input type="radio" name="q4" value="B"> b. karbon dioksida</label>
+                <label><input type="radio" name="q4" value="C"> c. pencemar</label>
+                <label><input type="radio" name="q4" value="D"> d. atmosfer</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">5. Aktivitas manusia yang menyebabkan terbentuknya hujan asam adalah ....</div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> a. pembakaran bahan bakar fosil</label>
+                <label><input type="radio" name="q5" value="B"> b. penggunaan kantong plastik</label>
+                <label><input type="radio" name="q5" value="C"> c. penanaman hutan gundul</label>
+                <label><input type="radio" name="q5" value="D"> d. penggunaan kendaraan listrik</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">6. Dengan menemukan ... kalian dapat memahami teks eksplanasi dengan baik.</div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> a. simpulan</label>
+                <label><input type="radio" name="q6" value="B"> b. penutup</label>
+                <label><input type="radio" name="q6" value="C"> c. informasi penting</label>
+                <label><input type="radio" name="q6" value="D"> d. informasi tambahan</label>
+            </div>
+        </div>
+
+        <div class="story-box">
+            <b>Bacalah kutipan teks berikut untuk mengerjakan soal nomor 7 dan 8:</b><br>
+            Kekeringan merupakan kondisi ketika ketersediaan air tidak mampu memenuhi kebutuhan akibat rendahnya curah hujan dalam periode tertentu. Situasi ini dapat menimbulkan berbagai dampak, mulai dari keterbatasan akses terhadap air bersih hingga terganggunya produksi pangan.
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">7. Salah satu dampak terjadinya kekeringan yaitu ....</div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> a. keterbatasan akses terhadap air bersih</label>
+                <label><input type="radio" name="q7" value="B"> b. debit air makin melimpah</label>
+                <label><input type="radio" name="q7" value="C"> c. produksi pangan mengalami peningkatan</label>
+                <label><input type="radio" name="q7" value="D"> d. hewan ternak mudah beradaptasi</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="question-text">8. Pasangan kata dan arti kata yang tepat adalah ....</div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> a. akses - jalan buntu</label>
+                <label><input type="radio" name="q8" value="B"> b. hujan - titik-titik air yang berjatuhan dari udara karena proses pendinginan</label>
+                <label><input type="radio" name="q8" value="C"> c. produksi - penyaluran</label>
+                <label><input type="radio" name="q8" value="D"> d. pangan - pakaian</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="story-box">Oleh karena itu, penting untuk <b>mengelola</b> air dengan baik agar tidak terjadi kekeringan.</div>
+            <div class="question-text">9. Variasi kosakata yang dapat digunakan untuk menggantikan kata bercetak tebal adalah ....</div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> a. mengendalikan</label>
+                <label><input type="radio" name="q9" value="B"> b. menghentikan</label>
+                <label><input type="radio" name="q9" value="C"> c. menggunakan</label>
+                <label><input type="radio" name="q9" value="D"> d. menghabiskan</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 1</span>
+            <div class="story-box"><i>Arya selalu menjaga kebersihan lingkungan.</i></div>
+            <div class="question-text">10. Pengembangan kalimat yang tepat agar menjadi kalimat bermakna adalah ....</div>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> a. Arya selalu menjaga kebersihan lingkungan sekolah.</label>
+                <label><input type="radio" name="q10" value="B"> b. Arya selalu menjaga kebersihan lingkungan dan makan tepat waktu.</label>
+                <label><input type="radio" name="q10" value="C"> c. Arya selalu menjaga kebersihan lingkungan dengan cara membuang sampah di sungai.</label>
+                <label><input type="radio" name="q10" value="D"> d. Arya selalu menjaga kebersihan lingkungan dengan cara membuang sampah pada tempatnya.</label>
+            </div>
+        </div>
+
+        <!-- BAGIAN II -->
+        <div class="section-title">II. Ayo, memilih jawaban yang sesuai dengan memberi tanda centang (✓)! Kalian dapat memilih lebih dari satu jawaban.</div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">1. Tujuan membaca teks eksplanasi secara keseluruhan adalah ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_1" value="A"> agar dapat mengetahui teks tersebut sedang menjelaskan penyebab, dampak, atau cara penanggulangan suatu peristiwa</label>
+                <label><input type="checkbox" name="q2_1" value="B"> mencegah pembaca melewatkan bagian penting pada teks</label>
+                <label><input type="checkbox" name="q2_1" value="C"> langsung melihat jam keberangkatan atau kedatangan tanpa membaca detail lainnya</label>
+                <label><input type="checkbox" name="q2_1" value="D"> menemukan nomor meja, ruang, atau nama narasumber dalam jadwal acara</label>
+            </div>
+        </div>
+
+        <div class="story-box">
+            <b>Teks eksplanasi untuk mengerjakan soal nomor 2 sampai 6:</b><br>
+            Hujan es adalah fenomena cuaca ekstrem yang terjadi ketika butiran es terbentuk di atmosfer dan jatuh ke permukaan bumi. Fenomena ini biasanya muncul akibat ketidakstabilan atmosfer. Hujan es terjadi saat udara hangat bertemu udara dingin dengan kelembapan tinggi sehingga memicu terbentuknya awan kumulonimbus.<br><br>
+            Awan kumulonimbus memiliki kemampuan menghasilkan butiran es yang cukup besar. Awan ini akan turun ketika angin tidak cukup kuat untuk mencairkannya sebelum mencapai permukaan. Proses terbentuknya hujan es didorong arus udara naik yang kuat di dalam awan sehingga puncak awan dapat mencapai lapisan tropopause dengan suhu ekstrem hingga -60°C atau lebih.<br><br>
+            Ukuran butiran es bervariasi, umumnya berkisar antara 5 hingga 50 mm. Fenomena ini paling sering terjadi di daerah dataran tinggi atau wilayah dengan suhu permukaan relatif dingin dan biasanya berlangsung singkat. Namun, mampu menimbulkan kerusakan pada infrastruktur, tanaman, atau kendaraan.<br><br>
+            Hujan es berukuran besar atau disertai angin kencang berpotensi menimbulkan kerusakan serius. Misalnya, pecahnya kaca, genting rumah, atau kerusakan infrastruktur lainnya. Sayangnya, hujan es sulit diprediksi secara tepat waktu dan lokasi. Oleh karena itu, kewaspadaan tetap diperlukan, terutama selama musim penghujan. Masyarakat disarankan memperkuat konstruksi bangunan agar lebih tahan terhadap hujan es dan angin kencang.
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">2. Berikut tanda-tanda terjadinya peristiwa hujan es adalah ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_2" value="A"> adanya ketidakstabilan atmosfer</label>
+                <label><input type="checkbox" name="q2_2" value="B"> udara hangat bertemu udara dingin dengan kelembapan tinggi</label>
+                <label><input type="checkbox" name="q2_2" value="C"> munculnya awan kumulus</label>
+                <label><input type="checkbox" name="q2_2" value="D"> munculnya awan kumulonimbus</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">3. Kerusakan yang dapat ditimbulkan oleh hujan es, antara lain ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_3" value="A"> kerusakan infrastruktur</label>
+                <label><input type="checkbox" name="q2_3" value="B"> pecahnya kaca dan genting</label>
+                <label><input type="checkbox" name="q2_3" value="C"> pohon-pohon mulai meranggas</label>
+                <label><input type="checkbox" name="q2_3" value="D"> tercemarnya wilayah perairan</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">4. Tentukan pernyataan berikut Benar atau Salah mengenai pasangan kata dan arti kata yang tepat!</div>
+            <div class="table-responsive">
+                <table class="bs-table">
+                    <tr><th>Pasangan Kata dan Arti Kata</th><th width="70">Benar</th><th width="70">Salah</th></tr>
+                    <tr>
+                        <td>kelembapan - tidak basah, kering</td>
+                        <td class="center"><input type="radio" name="q2_4_a" value="Benar"></td>
+                        <td class="center"><input type="radio" name="q2_4_a" value="Salah"></td>
+                    </tr>
+                    <tr>
+                        <td>angin - gerakan udara dari daerah yang bertekanan tinggi ke daerah bertekanan rendah</td>
+                        <td class="center"><input type="radio" name="q2_4_b" value="Benar"></td>
+                        <td class="center"><input type="radio" name="q2_4_b" value="Salah"></td>
+                    </tr>
+                    <tr>
+                        <td>awan - kelompok butiran air, es, atau kedua-duanya yang tampak mengelompok di atmosfer</td>
+                        <td class="center"><input type="radio" name="q2_4_c" value="Benar"></td>
+                        <td class="center"><input type="radio" name="q2_4_c" value="Salah"></td>
+                    </tr>
+                    <tr>
+                        <td>hujan es - titik-titik air yang berjatuhan dari udara karena proses pendinginan dan berupa es</td>
+                        <td class="center"><input type="radio" name="q2_4_d" value="Benar"></td>
+                        <td class="center"><input type="radio" name="q2_4_d" value="Salah"></td>
+                    </tr>
+                    <tr>
+                        <td>dingin - bersuhu tinggi</td>
+                        <td class="center"><input type="radio" name="q2_4_e" value="Benar"></td>
+                        <td class="center"><input type="radio" name="q2_4_e" value="Salah"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">5. Informasi yang sesuai dengan teks tersebut adalah ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_5" value="A"> hujan es sulit diprediksi secara tepat waktu dan lokasi</label>
+                <label><input type="checkbox" name="q2_5" value="B"> daerah dataran rendah paling sering mengalami hujan es</label>
+                <label><input type="checkbox" name="q2_5" value="C"> hujan es yang disertai angin kencang berpotensi menimbulkan kerusakan serius</label>
+                <label><input type="checkbox" name="q2_5" value="D"> awan kumulonimbus tidak mampu menghasilkan butiran es</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">6. Struktur teks eksplanasi yang terdapat pada paragraf pertama dan terakhir adalah ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_6" value="A"> pernyataan umum</label>
+                <label><input type="checkbox" name="q2_6" value="B"> penutup</label>
+                <label><input type="checkbox" name="q2_6" value="C"> deretan penting</label>
+                <label><input type="checkbox" name="q2_6" value="D"> deretan penjelas</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">7. Penggunaan kosakata yang berulang-ulang dapat menyebabkan ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_7" value="A"> tulisan menjadi kurang menarik</label>
+                <label><input type="checkbox" name="q2_7" value="B"> pembaca mengalami kebosanan</label>
+                <label><input type="checkbox" name="q2_7" value="C"> tulisan menjadi mudah dipahami</label>
+                <label><input type="checkbox" name="q2_7" value="D"> pembaca memperkaya kosakata</label>
+            </div>
+        </div>
+
+        <div class="story-box">
+            <b>Paragraf untuk mengerjakan soal nomor 8 dan 9:</b><br>
+            Banjir bandang berbeda dengan banjir biasa. Jika banjir umumnya terjadi <b>perlahan</b>, banjir bandang muncul mendadak dan berlangsung singkat. Namun, daya rusaknya sangat tinggi. Banyak korban jiwa dan kerusakan parah terjadi [....] masyarakat tidak sempat melakukan evakuasi. Salah satu penyebab banjir bandang yaitu air hujan tidak sempat meresap ke tanah. [....], langsung mengalir ke sungai [....] menyebabkan luapan.
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">8. Variasi kosakata pada kata bercetak tebal (perlahan) pada kutipan teks tersebut adalah ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_8" value="A"> bertahap</label>
+                <label><input type="checkbox" name="q2_8" value="B"> tiba-tiba</label>
+                <label><input type="checkbox" name="q2_8" value="C"> seketika</label>
+                <label><input type="checkbox" name="q2_8" value="D"> perlahan</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">9. Kata penghubung yang sesuai untuk melengkapi kalimat rumpang di atas secara berurutan adalah ....</div>
+            <div class="options">
+                <label><input type="checkbox" name="q2_9" value="A"> karena</label>
+                <label><input type="checkbox" name="q2_9" value="B"> sehingga</label>
+                <label><input type="checkbox" name="q2_9" value="C"> pertama</label>
+                <label><input type="checkbox" name="q2_9" value="D"> setelah itu</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 3</span>
+            <div class="question-text">10. Tentukan pernyataan berikut Sesuai atau Tidak Sesuai mengenai langkah-langkah membuat kata tambahan agar menjadi kalimat yang bermakna!</div>
+            <div class="table-responsive">
+                <table class="bs-table">
+                    <tr><th>Pernyataan</th><th width="80">Sesuai</th><th width="90">Tidak Sesuai</th></tr>
+                    <tr>
+                        <td>Langkah pertama yaitu membaca kalimat dasar terlebih dahulu.</td>
+                        <td class="center"><input type="radio" name="q2_10_a" value="Sesuai"></td>
+                        <td class="center"><input type="radio" name="q2_10_a" value="Tidak Sesuai"></td>
+                    </tr>
+                    <tr>
+                        <td>Selanjutnya, memikirkan maksud dari kalimat dasar secara mendalam.</td>
+                        <td class="center"><input type="radio" name="q2_10_b" value="Sesuai"></td>
+                        <td class="center"><input type="radio" name="q2_10_b" value="Tidak Sesuai"></td>
+                    </tr>
+                    <tr>
+                        <td>Setelah itu, mengembangkan kalimat dasar dengan kata-kata seadanya.</td>
+                        <td class="center"><input type="radio" name="q2_10_c" value="Sesuai"></td>
+                        <td class="center"><input type="radio" name="q2_10_c" value="Tidak Sesuai"></td>
+                    </tr>
+                    <tr>
+                        <td>Setelah itu, menghilangkan beberapa kata-kata dalam kalimat dasar.</td>
+                        <td class="center"><input type="radio" name="q2_10_d" value="Sesuai"></td>
+                        <td class="center"><input type="radio" name="q2_10_d" value="Tidak Sesuai"></td>
+                    </tr>
+                    <tr>
+                        <td>Langkah terakhir yaitu menuliskan kembali kalimat yang sudah dikembangkan.</td>
+                        <td class="center"><input type="radio" name="q2_10_e" value="Sesuai"></td>
+                        <td class="center"><input type="radio" name="q2_10_e" value="Tidak Sesuai"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- BAGIAN III -->
+        <div class="section-title">III. Ayo, pasangkan ciri-ciri teks eksplanasi berikut! Pasangkan dengan jawaban yang tepat!</div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor Total: 15 (5 Soal @3)</span>
+            <div class="table-responsive">
+                <table class="bs-table">
+                    <tr><th>Kategori Ciri</th><th>Pilih Pasangan yang Tepat</th></tr>
+                    <tr>
+                        <td>1. Bahasa yang digunakan</td>
+                        <td>
+                            <select id="m1" class="match-select">
+                                <option value="">-- Pilih Jawaban --</option>
+                                <option value="persuasif">persuasif</option>
+                                <option value="informatif">informatif</option>
+                                <option value="terkait ilmu pengetahuan">terkait ilmu pengetahuan</option>
+                                <option value="fokus pada hal-hal umum">fokus pada hal-hal umum</option>
+                                <option value="bahasa tidak baku">bahasa tidak baku</option>
+                                <option value="sesuai data dan fakta">sesuai data dan fakta</option>
+                                <option value="sesuai opini dan pengalaman seseorang">sesuai opini dan pengalaman seseorang</option>
+                                <option value="bahasa baku">bahasa baku</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2. Topik yang dibahas</td>
+                        <td>
+                            <select id="m2" class="match-select">
+                                <option value="">-- Pilih Jawaban --</option>
+                                <option value="persuasif">persuasif</option>
+                                <option value="informatif">informatif</option>
+                                <option value="terkait ilmu pengetahuan">terkait ilmu pengetahuan</option>
+                                <option value="fokus pada hal-hal umum">fokus pada hal-hal umum</option>
+                                <option value="bahasa tidak baku">bahasa tidak baku</option>
+                                <option value="sesuai data dan fakta">sesuai data dan fakta</option>
+                                <option value="sesuai opini dan pengalaman seseorang">sesuai opini dan pengalaman seseorang</option>
+                                <option value="bahasa baku">bahasa baku</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3. Pemaparan informasi</td>
+                        <td>
+                            <select id="m3" class="match-select">
+                                <option value="">-- Pilih Jawaban --</option>
+                                <option value="persuasif">persuasif</option>
+                                <option value="informatif">informatif</option>
+                                <option value="terkait ilmu pengetahuan">terkait ilmu pengetahuan</option>
+                                <option value="fokus pada hal-hal umum">fokus pada hal-hal umum</option>
+                                <option value="bahasa tidak baku">bahasa tidak baku</option>
+                                <option value="sesuai data dan fakta">sesuai data dan fakta</option>
+                                <option value="sesuai opini dan pengalaman seseorang">sesuai opini dan pengalaman seseorang</option>
+                                <option value="bahasa baku">bahasa baku</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4. Fokus pembahasan</td>
+                        <td>
+                            <select id="m4" class="match-select">
+                                <option value="">-- Pilih Jawaban --</option>
+                                <option value="persuasif">persuasif</option>
+                                <option value="informatif">informatif</option>
+                                <option value="terkait ilmu pengetahuan">terkait ilmu pengetahuan</option>
+                                <option value="fokus pada hal-hal umum">fokus pada hal-hal umum</option>
+                                <option value="bahasa tidak baku">bahasa tidak baku</option>
+                                <option value="sesuai data dan fakta">sesuai data dan fakta</option>
+                                <option value="sesuai opini dan pengalaman seseorang">sesuai opini dan pengalaman seseorang</option>
+                                <option value="bahasa baku">bahasa baku</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5. Sifat teks</td>
+                        <td>
+                            <select id="m5" class="match-select">
+                                <option value="">-- Pilih Jawaban --</option>
+                                <option value="persuasif">persuasif</option>
+                                <option value="informatif">informatif</option>
+                                <option value="terkait ilmu pengetahuan">terkait ilmu pengetahuan</option>
+                                <option value="fokus pada hal-hal umum">fokus pada hal-hal umum</option>
+                                <option value="bahasa tidak baku">bahasa tidak baku</option>
+                                <option value="sesuai data dan fakta">sesuai data dan fakta</option>
+                                <option value="sesuai opini dan pengalaman seseorang">sesuai opini dan pengalaman seseorang</option>
+                                <option value="bahasa baku">bahasa baku</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- BAGIAN IV -->
+        <div class="section-title">IV. Ayo, melengkapi pernyataan-pernyataan berikut dengan tepat!</div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 4</span>
+            <div class="question-text">1. Teks eksplanasi adalah teks yang menjelaskan terjadinya ....</div>
+            <input type="text" id="q4_1" class="short-input" placeholder="Tuliskan jawaban singkat...">
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 4</span>
+            <div class="story-box"><i>Bersepeda dan berjalan kaki dapat mengurangi kadar polusi yang ada dalam suatu wilayah.</i></div>
+            <div class="question-text">2. Variasi kosakata yang dapat digunakan untuk mengganti kata bercetak tebal (kurang/mengurangi) adalah ....</div>
+            <input type="text" id="q4_2" class="short-input" placeholder="Tuliskan jawaban singkat...">
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 4</span>
+            <div class="question-text">3. Struktur teks eksplanasi yang berisi simpulan tentang suatu fenomena dinamakan ....</div>
+            <input type="text" id="q4_3" class="short-input" placeholder="Tuliskan jawaban singkat...">
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 4</span>
+            <div class="story-box"><i>Sampah dapat mencemari tanah, air, dan udara. [....], dibutuhkan penerapan sistem pengelolaan sampah yang terstruktur.</i></div>
+            <div class="question-text">4. Kata penghubung yang tepat untuk melengkapi kalimat di atas adalah ....</div>
+            <input type="text" id="q4_4" class="short-input" placeholder="Tuliskan jawaban singkat...">
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 4</span>
+            <div class="question-text">5. Kata-kata tambahan dapat diberikan pada kalimat yang terasa kurang jelas dalam mengungkapkan sesuatu agar kalimat menjadi ....</div>
+            <input type="text" id="q4_5" class="short-input" placeholder="Tuliskan jawaban singkat...">
+        </div>
+
+        <!-- BAGIAN V -->
+        <div class="section-title">V. Ayo, mengerjakan soal-soal berikut dengan tepat!</div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 5</span>
+            <div class="question-text">1. Bagaimana langkah-langkah dalam menulis teks eksplanasi?</div>
+            <textarea id="q5_1" placeholder="Tuliskan jawaban lengkap Anda di sini..."></textarea>
+        </div>
+
+        <div class="story-box">
+            <b>Bacaan untuk mengerjakan soal nomor 2 dan 3:</b><br>
+            Zahra merupakan sosok aktivis yang menaruh perhatian pada bidang sosial sejak berusia 16 tahun. Pengalaman mengunjungi kamp pengungsi korban banjir bandang di Garut membuka matanya terhadap pentingnya pengurangan risiko bencana dan perubahan iklim.<br>
+            Setelah lulus kuliah, Zahra mulai terjun ke bidang pengelolaan sampah. Bersama timnya, ia mengurangi lebih dari 100 ton sampah plastik. Zahra pun mendirikan Envolvement.id, sebuah inisiatif yang sudah melatih 35 pemimpin muda dalam memperhatikan perubahan iklim.
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 5</span>
+            <div class="question-text">2. Apa pengalaman yang dialami Zahra hingga membuatnya paham akan pentingnya menghadapi perubahan iklim?</div>
+            <textarea id="q5_2" placeholder="Tuliskan jawaban lengkap Anda di sini..."></textarea>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 5</span>
+            <div class="question-text">3. Tuliskan makna kata berikut:<br>a. Bencana<br>b. Kamp<br>c. Iklim</div>
+            <textarea id="q5_3" placeholder="Tuliskan jawaban a, b, dan c di sini..."></textarea>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 5</span>
+            <div class="story-box"><i>Kekeringan mulai melanda beberapa wilayah.</i></div>
+            <div class="question-text">4. Kembangkan kalimat tersebut menjadi kalimat yang lebih jelas!</div>
+            <textarea id="q5_4" placeholder="Tuliskan jawaban lengkap Anda di sini..."></textarea>
+        </div>
+
+        <div class="question-card">
+            <span class="score-badge">Skor: 5</span>
+            <div class="story-box">
+                Pohon menjadi sumber dan penghasil oksigen yang baik bagi kehidupan manusia. Menurut laporan Panel Antarpemerintah PBB tentang perubahan iklim (IPCC), pada tahun 2023 keadaan di bumi semakin memburuk akibat emisi gas rumah kaca. Oleh karena itu, penanaman pohon diperlukan untuk menjaga keseimbangan dan menghasilkan kadar oksigen yang lebih baik bagi kehidupan manusia.
+            </div>
+            <div class="question-text">5. Sebutkan kata konsonan rangkap pada kalimat/penggalan teks tersebut!</div>
+            <textarea id="q5_5" placeholder="Tuliskan kata-kata konsonan rangkap yang terdapat dalam teks..."></textarea>
+        </div>
+
+        <div class="action-buttons">
+            <button type="button" class="btn btn-submit" onclick="submitQuiz()">Kirim & Selesaikan Ujian</button>
+            <button type="button" id="downloadBtn" class="btn btn-download" onclick="downloadResults()">Unduh Laporan Jawaban (Guru)</button>
+        </div>
+    </form>
+
+    <div class="footer-teacher">
+        Guru Pengampu:<br><br><br>
+        <u>Wahyu Desy W.S, S.Pd.</u>
+    </div>
+</div>
+
+<script>
+    // Kunci Jawaban Bagian I (PG)
+    const keyPart1 = { q1: 'A', q2: 'D', q3: 'B', q4: 'A', q5: 'A', q6: 'C', q7: 'A', q8: 'B', q9: 'A', q10: 'D' };
+    
+    // Kunci Jawaban Bagian II (PG Kompleks & B/S)
+    const keyPart2_Multiple = {
+        q2_1: ['A', 'B'],
+        q2_2: ['A', 'B', 'D'],
+        q2_3: ['A', 'B'],
+        q2_5: ['A', 'C'],
+        q2_6: ['A', 'B'],
+        q2_7: ['A', 'B'],
+        q2_8: ['A', 'D'],
+        q2_9: ['A', 'B', 'D']
+    };
+
+    const keyPart2_BS1 = {
+        q2_4_a: 'Salah', q2_4_b: 'Benar', q2_4_c: 'Benar', q2_4_d: 'Benar', q2_4_e: 'Salah'
+    };
+
+    const keyPart2_BS2 = {
+        q2_10_a: 'Sesuai', q2_10_b: 'Sesuai', q2_10_c: 'Tidak Sesuai', q2_10_d: 'Tidak Sesuai', q2_10_e: 'Sesuai'
+    };
+
+    // Kunci Jawaban Bagian III (Menjodohkan)
+    const keyPart3 = {
+        m1: 'bahasa baku',
+        m2: 'terkait ilmu pengetahuan',
+        m3: 'sesuai data dan fakta',
+        m4: 'fokus pada hal-hal umum',
+        m5: 'informatif'
+    };
+
+    // Kunci Jawaban Bagian IV (Isian)
+    const keyPart4 = {
+        q4_1: ['fenomena', 'peristiwa', 'proses', 'kejadian'],
+        q4_2: ['menurunkan', 'menekan', 'meminimalkan'],
+        q4_3: ['penutup', 'interpretasi', 'simpulan'],
+        q4_4: ['oleh karena itu', 'maka dari itu', 'sehingga'],
+        q4_5: ['bermakna', 'jelas', 'lengkap', 'efektif']
+    };
+
+    let scorePart1 = 0;
+    let scorePart2 = 0;
+    let scorePart3 = 0;
+    let scorePart4 = 0;
+    let totalAutoScore = 0;
+
+    function submitQuiz() {
+        const nama = document.getElementById('namaSiswa').value.trim();
+        const no = document.getElementById('noAbsen').value.trim();
+
+        if (!nama || !no) {
+            alert('Harap isi Nama Lengkap dan Nomor Presensi terlebih dahulu!');
+            return;
+        }
+
+        // Hitung Bagian I
+        scorePart1 = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === keyPart1[`q${i}`]) {
+                scorePart1 += 1;
+            }
+        }
+
+        // Hitung Bagian II
+        scorePart2 = 0;
+        // PG Kompleks
+        ['q2_1', 'q2_2', 'q2_3', 'q2_5', 'q2_6', 'q2_7', 'q2_8', 'q2_9'].forEach(qKey => {
+            const checkboxes = document.querySelectorAll(`input[name="${qKey}"]:checked`);
+            const values = Array.from(checkboxes).map(cb => cb.value);
+            const target = keyPart2_Multiple[qKey];
+            if (values.length === target.length && values.every(v => target.includes(v))) {
+                scorePart2 += 3;
+            } else if (values.length > 0 && values.every(v => target.includes(v))) {
+                scorePart2 += 1.5;
+            }
+        });
+
+        // B/S Soal 4
+        let correctBs1 = 0;
+        for (let key in keyPart2_BS1) {
+            const sel = document.querySelector(`input[name="${key}"]:checked`);
+            if (sel && sel.value === keyPart2_BS1[key]) correctBs1++;
+        }
+        scorePart2 += Math.round((correctBs1 / 5) * 3);
+
+        // B/S Soal 10
+        let correctBs2 = 0;
+        for (let key in keyPart2_BS2) {
+            const sel = document.querySelector(`input[name="${key}"]:checked`);
+            if (sel && sel.value === keyPart2_BS2[key]) correctBs2++;
+        }
+        scorePart2 += Math.round((correctBs2 / 5) * 3);
+
+        // Hitung Bagian III
+        scorePart3 = 0;
+        for (let key in keyPart3) {
+            const sel = document.getElementById(key).value;
+            if (sel === keyPart3[key]) {
+                scorePart3 += 3;
+            }
+        }
+
+        // Hitung Bagian IV
+        scorePart4 = 0;
+        for (let key in keyPart4) {
+            const val = document.getElementById(key).value.trim().toLowerCase();
+            if (keyPart4[key].some(k => val.includes(k))) {
+                scorePart4 += 4;
+            }
+        }
+
+        totalAutoScore = scorePart1 + scorePart2 + scorePart3 + scorePart4;
+
+        alert(`Jawaban berhasil dikirim!\n\nSkor Otomatis (Bagian I, II, III, IV): ${totalAutoScore} / 75\n*Bagian V (Uraian: Maks 25 skor) akan diperiksa manual oleh Guru (Wahyu Desy W.S, S.Pd.).\n\nSilakan klik tombol "Unduh Laporan Jawaban (Guru)" untuk menyimpan berkas.`);
+
+        document.getElementById('downloadBtn').style.display = 'inline-block';
+    }
+
+    function downloadResults() {
+        const nama = document.getElementById('namaSiswa').value.trim() || "Tanpa Nama";
+        const no = document.getElementById('noAbsen').value.trim() || "-";
+
+        let textContent = `=========================================================\n`;
+        textContent += `LAPORAN HASIL SUMATIF TENGAH SEMESTER 1 BAHASA INDONESIA KELAS 6\n`;
+        textContent += `SD 2 MENAWAN - TAHUN AJARAN 2026/2027\n`;
+        textContent += `=========================================================\n`;
+        textContent += `Nama Siswa     : ${nama}\n`;
+        textContent += `Nomor Presensi : ${no}\n`;
+        textContent += `Tanggal        : ${new Date().toLocaleDateString('id-ID')}\n`;
+        textContent += `Pengampu       : Wahyu Desy W.S, S.Pd.\n`;
+        textContent += `---------------------------------------------------------\n`;
+        textContent += `SKOR OTOMATIS (Bagian I, II, III, IV) : ${totalAutoScore} / 75\n`;
+        textContent += `- Bagian I (Pilihan Ganda)            : ${scorePart1} / 10\n`;
+        textContent += `- Bagian II (PG Kompleks & B/S)       : ${scorePart2} / 30\n`;
+        textContent += `- Bagian III (Menjodohkan)            : ${scorePart3} / 15\n`;
+        textContent += `- Bagian IV (Isian Singkat)           : ${scorePart4} / 20\n`;
+        textContent += `- Bagian V (Uraian Manual)            : Perlu Koreksi Guru (Maks 25)\n`;
+        textContent += `=========================================================\n\n`;
+
+        textContent += `--- JAWABAN ISIAN SISWA (BAGIAN IV) ---\n`;
+        textContent += `1. ${document.getElementById('q4_1').value || "(Tidak diisi)"}\n`;
+        textContent += `2. ${document.getElementById('q4_2').value || "(Tidak diisi)"}\n`;
+        textContent += `3. ${document.getElementById('q4_3').value || "(Tidak diisi)"}\n`;
+        textContent += `4. ${document.getElementById('q4_4').value || "(Tidak diisi)"}\n`;
+        textContent += `5. ${document.getElementById('q4_5').value || "(Tidak diisi)"}\n\n`;
+
+        textContent += `--- JAWABAN URAIAN SISWA (BAGIAN V) ---\n\n`;
+        textContent += `Soal 1 (Skor Maks 5):\n${document.getElementById('q5_1').value || "(Tidak diisi)"}\n\n`;
+        textContent += `Soal 2 (Skor Maks 5):\n${document.getElementById('q5_2').value || "(Tidak diisi)"}\n\n`;
+        textContent += `Soal 3 (Skor Maks 5):\n${document.getElementById('q5_3').value || "(Tidak diisi)"}\n\n`;
+        textContent += `Soal 4 (Skor Maks 5):\n${document.getElementById('q5_4').value || "(Tidak diisi)"}\n\n`;
+        textContent += `Soal 5 (Skor Maks 5):\n${document.getElementById('q5_5').value || "(Tidak diisi)"}\n\n`;
+
+        const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `Hasil_STS1_BIndo_Kl6_${nama.replace(/\s+/g, '_')}_No${no}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+
+</body>
+</html>
